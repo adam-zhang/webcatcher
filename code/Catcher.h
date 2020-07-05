@@ -3,17 +3,16 @@
 
 #include <string>
 #include <memory>
-//#include <curl/curl.h>
+#include <curl/curl.h>
 
 class Catcher
 {
 public:
 	Catcher();
 	~Catcher();
-
 private:
 	std::string catchPage(const std::string& url);
-//private:
-//	std::unique_ptr<CURL> curl_;
+private:
+	CURL* curl_;
 };
 #endif//__CATCHER__H
